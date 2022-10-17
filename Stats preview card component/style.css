@@ -1,0 +1,151 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap');
+
+:root{
+    /* we put the colors in the variable */
+    /* ### Primary */
+    --main-background: #090b1a;   
+    --card-background: #1b1938;  
+    --accent: #aa5cdb;    
+
+    /* ### Neutral */
+    --main-heading-stats: #ffffff; 
+    --main-paragraph: #ffffffbf; 
+    --stat-headings: #ffffff99;
+}
+
+* {
+    /* for * -> it's better to have 3 of them together */
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    /* for body we don't need to have height & width -> because the body covers the whole page */
+    background-color: var(--main-background);
+    font-family: Inter, sans-serif;
+    font-size: 15px;
+    color: white;
+    text-align: center;
+}
+
+main {
+    width: 375px;
+    /* here we use margin because -> when we use padding the size of the box grows 
+    but with margin -> it takes distance from the parent's box & usually the size of the box wont change */
+    margin: 40px auto;  
+}
+
+.img_container{
+    /* center/cover -> allow the picture to take the whole space */
+    background: url("./images/image-header-desktop.jpg") no-repeat center/cover;
+    /* we must put height for background-image -> let the image to show up on the screen */
+    height: 300px;
+    border-radius: 5px 5px 0px 0px; 
+}
+
+
+.overlay{
+    background: var(--accent);
+    /* we must put height for background -> let the image to show up on the screen */
+    height: 100%;
+    opacity: 50%;
+    border-radius: 5px 5px 0px 0px;
+}
+
+.text_area {
+    background-color: var(--card-background);
+    border-radius: 0px 0px 5px 5px;
+    padding-bottom: 30px;
+}
+
+h1 {
+  font-size: 30px;
+  padding: 30px 40px 20px 40px;  
+}
+
+h1 span {
+    color: var(--accent);
+}
+
+p {
+    padding: 0px 50px 20px 50px; 
+    /* The space between the lines */
+    line-height: 25px;
+    word-spacing: 2px;
+    color: var(--main-paragraph);
+}
+
+ul {
+    list-style: none;
+}
+
+ul li {
+    font-size: 13px;
+    /* padding: 20px 0px; */
+    line-height: 1.6;
+    margin-bottom: 20px;
+    color: var(--stat-headings);
+}
+
+ul span {
+    font-weight: 800;
+    font-size: 24px;
+    display: block;
+    color: white;
+}
+
+footer {
+    font-size: small;
+    margin: auto;
+}
+
+footer p{
+    color: white;
+}
+
+footer a { 
+    color: #3e52a3; 
+}
+
+@media (min-width: 850px) {
+
+    main {
+        width: 800px;
+        height: 400px;
+        margin-top: 215px;
+        display: flex;
+        flex-direction: row-reverse;
+        text-align: left;
+    }
+
+    .img_container {
+        border-radius: 0px 5px 5px 0px;
+        height: 100%;
+        width: 120%;
+    }
+
+    .text_area {
+        border-radius: 5px 0px 0px 5px;   
+    }
+
+    h1{
+        padding: 30px 40px;
+    }
+
+    p {
+        padding: 20px 40px;
+    }
+
+    ul {
+        padding: 30px 40px;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .overlay {
+        border-radius: 0px 5px 5px 0px;
+    }
+
+}
